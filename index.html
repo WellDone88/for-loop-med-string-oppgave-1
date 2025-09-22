@@ -12,14 +12,22 @@ Vokaler: a, e, i, o, u, y, æ, ø, å
 Bruk en variabel for hver av vokalene feks let aCounter  = 0 som plusses oppover dersom du finner bokstaven i tekststringen -->
 
 
-<!-- prøver meg med samme eksempel først før jeg tar oppgaven -->
+<!-- prøver meg med samme eksempel som moodle først før jeg tar oppgaven -->
 <p id="text"></p>
 <button onclick="Vocal('I dag skinner sola!')">count vocals</button>
 
 <script>
+    //a, e, i, o, u, y, æ, ø, å
+    let aCounter = 0;
+    let eCounter = 0;
+    let iCounter = 0;
+    let oCounter = 0;
+    let uCounter = 0;
+    let yCounter = 0;
 
     function Vocal(MyString){
         let quote = ''
+        aCounter
         for(i=0; i <= MyString.length; i++){
            quote = quote + MyString.charAt(i);
         }
