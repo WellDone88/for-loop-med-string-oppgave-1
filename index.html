@@ -11,8 +11,23 @@ Lag en funksjon som teller opp antall vokaler i en string ved hjelp av en for-l�
 Vokaler: a, e, i, o, u, y, æ, ø, å
 Bruk en variabel for hver av vokalene feks let aCounter  = 0 som plusses oppover dersom du finner bokstaven i tekststringen -->
 
-<p>I dag skinner sola!</p>
 
-<script></script>
+<!-- prøver meg med samme eksempel først før jeg tar oppgaven -->
+<p id="text"></p>
+<button onclick="Vocal('I dag skinner sola!')">count vocals</button>
+
+<script>
+
+    function Vocal(MyString){
+        let quote = ''
+        for(i=0; i <= MyString.length; i++){
+           quote = quote + MyString.charAt(i);
+        }
+        document.getElementById("text").innerHTML = quote;
+        
+    }
+
+</script>
+
 </body>
 </html>
