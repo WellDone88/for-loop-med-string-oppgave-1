@@ -15,7 +15,7 @@ oppover dersom du finner bokstaven i tekststringen -->
 
 <!-- prøver meg med samme eksempel som moodle først før jeg tar oppgaven -->
 <p id="text"></p>
-<button onclick="Vocal('I dag skinner sola!')">count vocals</button>
+<button onclick="Vowels('I dag skinner sola!')">count vocals</button>
 
 <script>
     //a, e, i, o, u, y, æ, ø, å
@@ -26,7 +26,7 @@ oppover dersom du finner bokstaven i tekststringen -->
     let uCounter = 0;
     let yCounter = 0;
 
-    function Vocal(MyString){
+    function Vowels(MyString){
         let quote = ''
         for(i=0; i <= MyString.length; i++){
            quote = quote + MyString.charAt(i);
