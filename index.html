@@ -15,25 +15,90 @@ oppover dersom du finner bokstaven i tekststringen -->
 
 <!-- prøver meg med samme eksempel som moodle først før jeg tar oppgaven -->
 <p id="text"></p>
-<button onclick="Vowels('I dag skinner sola!')">count vocals</button>
+<div id="results"></div>
+<button onclick="VowelsAndResult('I dag skinner sola!')">count vowels</button>
+
+<!-- følger oppgave teksten eksakt, prøver med arrays og litt slik senere etter jeg får til dette -->
 
 <script>
     //a, e, i, o, u, y, æ, ø, å
+    //let vowels = 'aeiouyæøåAEIOUYÆØÅ'
+    let VowelsCounter = 0;
     let aCounter = 0;
     let eCounter = 0;
     let iCounter = 0;
     let oCounter = 0;
     let uCounter = 0;
     let yCounter = 0;
+    let æCounter = 0;
+    let øCounter = 0;
+    let åCounter = 0;
+    
 
-    function Vowels(MyString){
-        let quote = ''
-        for(i=0; i <= MyString.length; i++){
-           quote = quote + MyString.charAt(i);
+
+    function VowelsAndResult(MyString){
+        let quote = '';
+        aCounter = 0;
+        eCounter = 0;
+        iCounter = 0;
+        oCounter = 0;
+        uCounter = 0;
+        yCounter = 0;
+        æCounter = 0;
+        æCounter = 0;
+        åCounter = 0;
+
+        for(i=0; i <= quote.length; i++){
+            let char = MyString.charAt(i).toLowerCase(); //toLowerCase så den teller alt. Neste å fikse :)
+            quote += char;
+             if(char === 'a'){
+                aCounter++
+            }
+            else if(char === 'e'){
+                eCounter++;
+
+            }
+
+            else if(char === 'i'){
+                iCounter++;
+
+            }
+
+            else if(char === 'o'){
+                oCounter++;
+
+            }
+
+            else if(char === 'u'){
+                uCounter++;
+
+            }
+            else if(char === 'y'){
+                yCounter++;
+
+            }
+            else if(char === 'æ'){
+                æCounter++;
+
+            }
+            else if(char === 'ø'){
+                øCounter++;
+
+            }
+            else if(char === 'å'){
+                åCounter++;
+
+            }
         }
-        document.getElementById("text").innerHTML = quote;
-        
+
+        document.getElementById("results").innerHTML = quote + '<br> a: ' + `${aCounter}` 
+        + '<br> e:' + `${eCounter}` + '<br> i:' + `${iCounter}` + '<br> o:' + `${oCounter}`
+        + '<br> u:' + `${uCounter}`+ '<br> y:' + `${yCounter}` + '<br> æ:'
+        + `${æCounter}`+ '<br> ø:' + `${æCounter}`+ '<br> å:' + `${åCounter}`;
     }
+
+   
+    //kunne jeg ikke laget en array?
 
 </script>
 
