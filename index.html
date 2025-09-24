@@ -17,6 +17,7 @@ oppover dersom du finner bokstaven i tekststringen -->
 <p id="text"></p>
 <div id="results"></div>
 <button onclick="VowelsAndResult('I dag skinner sola!')">count vowels</button>
+<input type="text" onchange="VowelsAndResult(this.value)">
 
 <!-- følger oppgave teksten eksakt, prøver med arrays og litt slik senere etter jeg får til dette -->
 
@@ -51,7 +52,7 @@ oppover dersom du finner bokstaven i tekststringen -->
         for(i=0; i <= quote.length; i++){
             let char = MyString.charAt(i).toLowerCase(); //toLowerCase så den teller alt. Neste å fikse dette i if setning med || :/ 
             quote += char;
-             if(char === 'a'){
+             if(char === 'a' ){
                 aCounter++
             }
             else if(char === 'e'){
